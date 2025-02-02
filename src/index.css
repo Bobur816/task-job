@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+body {
+  padding: 0;
+  margin: 0;
+  /* background-color: red; */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* Internet Explorer uchun */
+  scrollbar-width: none; /* Firefox uchun */
+}
+
+.ant-popover-arrow {
+  display: none !important;
+  left: -15px !important;
+  top: 40% !important;
+  transform: rotate(-90deg) !important;
+}
+
+.ant-btn.css-dev-only-do-not-override-cdzvx5.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid.ant-btn-sm {
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+  &:hover {
+    background-color: red;
+    color: #fff;
+  }
+}
+
+.auth {
+  background-image: url("./assets/auth-back.jpg");
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
