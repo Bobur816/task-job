@@ -22,11 +22,12 @@ export async function addCompany({ name, count }: { name: string; count: number 
 }
 
 export async function editCompany({ id, name, count }: { id: string; name: string; count: number }) {
-  console.log({ id, name, count });
+  // console.log({ id, name, count });
 
   try {
-    const response = await axiosInstance.put(`companies/update/${id}`, { name, count });
-    console.log(response);
+    // const response =
+    await axiosInstance.put(`companies/update`, { id, name, count });
+    // console.log(response);
     message.success("Successfully Edited");
   } catch (error: any) {
     message.error("Faild to edit");
@@ -36,8 +37,9 @@ export async function editCompany({ id, name, count }: { id: string; name: strin
 
 export async function deleteCompany({ id }: { id: string }) {
   try {
-    const response = await axiosInstance.delete(`companies/delete/by-id`, { params: { id } });
-    console.log(response);
+    // const response =
+    await axiosInstance.delete(`companies/delete/by-id`, { data: id });
+    // console.log(response);
     message.success("Successfully deleted");
   } catch (error: any) {
     message.error("Faild to delete");

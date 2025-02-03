@@ -10,7 +10,7 @@ function CompaniesTable({ companies }: { companies: [] }) {
 
   const handleDelete = (key: any) => {
     const id = key;
-    console.log("Delete:", key);
+    // console.log("Delete:", key);
     deleteCompany({ id });
   };
 

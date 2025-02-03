@@ -24,7 +24,8 @@ axiosInstance.interceptors.request.use(
 
 export async function signUp({ fullName, login, password }: { fullName: string; login: string; password: string }) {
   try {
-    const response = await axios({
+    // const response =
+    await axios({
       method: "post",
       url: `${BASE_URL}auths/sign-up`,
       data: {
@@ -33,7 +34,7 @@ export async function signUp({ fullName, login, password }: { fullName: string; 
         password,
       },
     });
-    console.log(response);
+    // console.log(response);
   } catch (error: any) {
     throw new Error(error);
   }

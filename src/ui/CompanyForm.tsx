@@ -14,11 +14,11 @@ function CompanyForm({ initialData, onCloseModal }: CompanyFormProps) {
 
   function handleSubmit(values: { name: string; count: number }) {
     const { name, count } = values;
-    console.log(values);
+    // console.log(values);
 
     if (initialData) {
-      console.log("handle Edit", initialData.id);
-      editCompany(initialData);
+      // console.log("handle Edit", initialData);
+      editCompany({ id: initialData.id, name, count });
     } else {
       console.log("handle Add");
       addCompany({ name, count });
@@ -45,7 +45,7 @@ function CompanyForm({ initialData, onCloseModal }: CompanyFormProps) {
         </label>
         <div>
           <Form.Item name="count" rules={[{ required: true, message: "Введите количество" }]}>
-            <Input placeholder="Введите количество" typeof="number" />
+            <Input placeholder="Введите количество" type="number" />
           </Form.Item>
         </div>
       </div>
